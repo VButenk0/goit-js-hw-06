@@ -32,7 +32,7 @@ function onValidInputBlur(event) {
   const value = event.target.value;
   const minLength = +event.target.dataset.length;
 
-  if (value.length > minLength) {
+  if (value.length === minLength) {
     event.target.classList.add("valid");
   } else {
     event.target.classList.add("invalid");

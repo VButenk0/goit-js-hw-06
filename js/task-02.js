@@ -15,9 +15,13 @@ const ingredients = [
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
 const ingrList = document.querySelector("#ingredients");
+const ingrArr = [];
+
 ingredients.forEach((ingridient) => {
   const ingrItem = document.createElement("li");
+
   ingrItem.textContent = ingridient;
   ingrItem.classList.add("item");
-  ingrList.appendChild(ingrItem);
+  ingrArr.push(ingrItem);
 });
+ingrList.append(...ingrArr);

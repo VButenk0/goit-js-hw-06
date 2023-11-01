@@ -28,12 +28,13 @@ function onFormElemSubmit(event) {
   const email = event.target.elements.email.value;
   const password = event.target.elements.password.value;
 
-  if (email === "" || password === "") {
-    alert("All fields must be filled");
-  }
-
   const result = { email, password };
 
-  console.log(result);
+  if (email === "" || password === "") {
+    alert("All fields must be filled");
+  } else {
+    console.log(result);
+  }
+
   event.target.reset();
 }
